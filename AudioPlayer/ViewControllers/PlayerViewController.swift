@@ -60,8 +60,12 @@ class PlayerViewController: UIViewController {
     @IBAction func playButtonPressed() {
         if audioPlayer!.isPlaying {
             audioPlayer?.pause()
+            playButton.setImage(UIImage(systemName: "play.fill"),
+                                for: .normal)
         } else {
             audioPlayer?.play()
+            playButton.setImage(UIImage(systemName: "pause.fill"),
+                                for: .normal)
         }
     }
     
