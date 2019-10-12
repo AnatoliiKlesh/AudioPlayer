@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7478BCB22351E4FF00CFE175 /* Rockstar.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7478BCB12351E4FF00CFE175 /* Rockstar.mp3 */; };
 		74888DCC234FC39E0084C67B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74888DCB234FC39E0084C67B /* AppDelegate.swift */; };
 		74888DCE234FC39E0084C67B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74888DCD234FC39E0084C67B /* SceneDelegate.swift */; };
 		74888DD3234FC39E0084C67B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74888DD1234FC39E0084C67B /* Main.storyboard */; };
@@ -18,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7478BCB12351E4FF00CFE175 /* Rockstar.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Rockstar.mp3; path = ../../../../../../Downloads/Rockstar.mp3; sourceTree = "<group>"; };
+		7478BCB42351FACA00CFE175 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		74888DC8234FC39E0084C67B /* AudioPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74888DCB234FC39E0084C67B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		74888DCD234FC39E0084C67B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,11 +44,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7478BCB02351E4C800CFE175 /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				7478BCB12351E4FF00CFE175 /* Rockstar.mp3 */,
+			);
+			path = Music;
+			sourceTree = "<group>";
+		};
+		7478BCB32351FACA00CFE175 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7478BCB42351FACA00CFE175 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		74888DBF234FC39E0084C67B = {
 			isa = PBXGroup;
 			children = (
 				74888DCA234FC39E0084C67B /* AudioPlayer */,
 				74888DC9234FC39E0084C67B /* Products */,
+				7478BCB32351FACA00CFE175 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,6 +120,7 @@
 		74888DE72350D4630084C67B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7478BCB02351E4C800CFE175 /* Music */,
 				74888DD4234FC39F0084C67B /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -174,6 +195,7 @@
 				74888DD8234FC39F0084C67B /* LaunchScreen.storyboard in Resources */,
 				74888DD5234FC39F0084C67B /* Assets.xcassets in Resources */,
 				74888DD3234FC39E0084C67B /* Main.storyboard in Resources */,
+				7478BCB22351E4FF00CFE175 /* Rockstar.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

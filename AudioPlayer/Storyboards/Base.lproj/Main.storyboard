@@ -51,7 +51,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="7sP-BZ-tsR">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="548.00000000000011"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                             </imageView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f90-il-cb0">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
@@ -82,6 +82,13 @@
                                                 </label>
                                                 <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="wNm-tI-D6v">
                                                     <rect key="frame" x="-2" y="65" width="254" height="34"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="minimumTrackTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="maximumTrackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="thumbTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <connections>
+                                                        <action selector="changeAudioTime" destination="hd0-YN-zhv" eventType="valueChanged" id="4db-Yd-WVU"/>
+                                                    </connections>
                                                 </slider>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="65N-XN-awy">
                                                     <rect key="frame" x="92.5" y="108" width="65.5" height="65.5"/>
@@ -93,6 +100,9 @@
                                                     <state key="normal" image="play.circle.fill" catalog="system">
                                                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="45" scale="large"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="playButtonPressed" destination="hd0-YN-zhv" eventType="touchUpInside" id="Cgn-tn-8za"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iPU-tK-XqH">
                                                     <rect key="frame" x="0.0" y="183.5" width="250" height="20"/>
@@ -139,6 +149,14 @@
                         <viewLayoutGuide key="safeArea" id="JFd-5t-Ujd"/>
                     </view>
                     <navigationItem key="navigationItem" id="nBF-EF-le5"/>
+                    <connections>
+                        <outlet property="artistNameLabel" destination="Oil-El-3sg" id="EM4-7W-3wI"/>
+                        <outlet property="coverImage" destination="f90-il-cb0" id="Mhz-SW-bSg"/>
+                        <outlet property="playButton" destination="65N-XN-awy" id="frX-cf-Jwh"/>
+                        <outlet property="slider" destination="wNm-tI-D6v" id="eQe-aA-9Ir"/>
+                        <outlet property="trackNameLabel" destination="1KF-Wd-hib" id="2QS-bs-a7A"/>
+                        <outlet property="trackReleaseYearLabel" destination="iPU-tK-XqH" id="1yy-3F-DW1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cCx-Hg-qVM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
