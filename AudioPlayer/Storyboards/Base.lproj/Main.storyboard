@@ -33,7 +33,7 @@
                     <navigationItem key="navigationItem" title="Root View Controller" id="CTo-BM-yiN">
                         <barButtonItem key="rightBarButtonItem" title="Item" id="Tc4-cM-Q1c">
                             <connections>
-                                <segue destination="hd0-YN-zhv" kind="show" id="bam-91-zeP"/>
+                                <segue destination="hd0-YN-zhv" kind="presentation" id="Dg1-K3-4ZP"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -47,16 +47,102 @@
             <objects>
                 <viewController id="hd0-YN-zhv" customClass="PlayerViewController" customModule="AudioPlayer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LW0-3T-18C">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="7sP-BZ-tsR">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="548.00000000000011"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f90-il-cb0">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Cw7-4z-nY5">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rockstar" translatesAutoresizingMaskIntoConstraints="NO" id="DRz-uU-Q4d">
+                                            <rect key="frame" x="35" y="50" width="250" height="250"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="DRz-uU-Q4d" secondAttribute="height" multiplier="1:1" id="hkh-Ow-wrM"/>
+                                            </constraints>
+                                        </imageView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="BTk-Wo-l2T">
+                                            <rect key="frame" x="35" y="320" width="250" height="203.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oil-El-3sg">
+                                                    <rect key="frame" x="0.0" y="0.0" width="250" height="25"/>
+                                                    <fontDescription key="fontDescription" name="Farah" family="Farah" pointSize="25"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1KF-Wd-hib">
+                                                    <rect key="frame" x="0.0" y="35" width="250" height="20"/>
+                                                    <fontDescription key="fontDescription" name="Farah" family="Farah" pointSize="20"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="wNm-tI-D6v">
+                                                    <rect key="frame" x="-2" y="65" width="254" height="34"/>
+                                                </slider>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="65N-XN-awy">
+                                                    <rect key="frame" x="92.5" y="108" width="65.5" height="65.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="65N-XN-awy" secondAttribute="height" multiplier="1:1" id="vNg-aV-SlC"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <state key="normal" image="play.circle.fill" catalog="system">
+                                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="45" scale="large"/>
+                                                    </state>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iPU-tK-XqH">
+                                                    <rect key="frame" x="0.0" y="183.5" width="250" height="20"/>
+                                                    <fontDescription key="fontDescription" name="Farah" family="Farah" pointSize="20"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="iPU-tK-XqH" secondAttribute="trailing" id="8rF-ug-NIN"/>
+                                                <constraint firstAttribute="trailing" secondItem="wNm-tI-D6v" secondAttribute="trailing" id="OAY-1k-9rv"/>
+                                                <constraint firstAttribute="width" secondItem="BTk-Wo-l2T" secondAttribute="height" multiplier="43:35" id="R3d-84-Qo3"/>
+                                                <constraint firstItem="iPU-tK-XqH" firstAttribute="leading" secondItem="BTk-Wo-l2T" secondAttribute="leading" id="cR0-ou-2Oe"/>
+                                                <constraint firstItem="Oil-El-3sg" firstAttribute="leading" secondItem="BTk-Wo-l2T" secondAttribute="leading" id="g3b-hU-6Sv"/>
+                                                <constraint firstItem="1KF-Wd-hib" firstAttribute="width" secondItem="Oil-El-3sg" secondAttribute="width" id="hsx-7B-WAH"/>
+                                                <constraint firstAttribute="trailing" secondItem="Oil-El-3sg" secondAttribute="trailing" id="ops-bd-TfT"/>
+                                                <constraint firstItem="wNm-tI-D6v" firstAttribute="leading" secondItem="BTk-Wo-l2T" secondAttribute="leading" id="vlP-Ix-kRZ"/>
+                                            </constraints>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="DRz-uU-Q4d" firstAttribute="leading" secondItem="Cw7-4z-nY5" secondAttribute="leading" constant="35" id="EQH-qF-sZ5"/>
+                                        <constraint firstItem="BTk-Wo-l2T" firstAttribute="centerX" secondItem="Cw7-4z-nY5" secondAttribute="centerX" id="Pc8-SD-w3e"/>
+                                        <constraint firstItem="BTk-Wo-l2T" firstAttribute="width" secondItem="DRz-uU-Q4d" secondAttribute="width" id="bGr-X7-zD8"/>
+                                        <constraint firstItem="DRz-uU-Q4d" firstAttribute="top" secondItem="Cw7-4z-nY5" secondAttribute="top" constant="50" id="kyP-Jo-RFx"/>
+                                        <constraint firstAttribute="trailing" secondItem="DRz-uU-Q4d" secondAttribute="trailing" constant="35" id="oDC-d8-2Ur"/>
+                                        <constraint firstItem="BTk-Wo-l2T" firstAttribute="top" secondItem="DRz-uU-Q4d" secondAttribute="bottom" constant="20" id="zvE-Zt-xkA"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="regular"/>
+                            </visualEffectView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="f90-il-cb0" firstAttribute="top" secondItem="JFd-5t-Ujd" secondAttribute="top" id="27H-DO-XLe"/>
+                            <constraint firstItem="f90-il-cb0" firstAttribute="leading" secondItem="JFd-5t-Ujd" secondAttribute="leading" id="5IZ-Mu-OR6"/>
+                            <constraint firstItem="7sP-BZ-tsR" firstAttribute="trailing" secondItem="JFd-5t-Ujd" secondAttribute="trailing" id="AKd-Ss-gYu"/>
+                            <constraint firstItem="7sP-BZ-tsR" firstAttribute="leading" secondItem="JFd-5t-Ujd" secondAttribute="leading" id="EPq-9l-fhk"/>
+                            <constraint firstItem="f90-il-cb0" firstAttribute="trailing" secondItem="JFd-5t-Ujd" secondAttribute="trailing" id="LUc-RH-KMC"/>
+                            <constraint firstAttribute="bottom" secondItem="7sP-BZ-tsR" secondAttribute="bottom" id="hoj-Eg-aTd"/>
+                            <constraint firstItem="7sP-BZ-tsR" firstAttribute="top" secondItem="JFd-5t-Ujd" secondAttribute="top" id="p6g-qB-3jx"/>
+                            <constraint firstAttribute="bottom" secondItem="f90-il-cb0" secondAttribute="bottom" id="uQT-4W-wt3"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="JFd-5t-Ujd"/>
                     </view>
                     <navigationItem key="navigationItem" id="nBF-EF-le5"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cCx-Hg-qVM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1157" y="95"/>
+            <point key="canvasLocation" x="1153.125" y="92.957746478873247"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gY0-3O-WlQ">
@@ -75,4 +161,9 @@
             <point key="canvasLocation" x="-576" y="96"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Rockstar" width="500" height="500"/>
+        <image name="background" width="626" height="443"/>
+        <image name="play.circle.fill" catalog="system" width="64" height="60"/>
+    </resources>
 </document>
