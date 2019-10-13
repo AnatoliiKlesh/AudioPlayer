@@ -18,16 +18,20 @@ class PlayerViewController: UIViewController {
     @IBOutlet var trackReleaseYearLabel: UILabel!
     @IBOutlet var playButton: UIButton!
     @IBOutlet var slider: UISlider!
+    @IBOutlet var imageView: UIImageView!
     
     // MARK: - Private Properties
     private var audioPlayer: AVAudioPlayer?
     
     // MARK: - Lifecycle
+    var trackName: String!
     override func viewDidLoad() {
         super.viewDidLoad()
-        let path = Bundle.main.path(forResource: "Rockstar.mp3", ofType:nil)!
+        let path = Bundle.main.path(forResource: nil, ofType:nil)!
         let url = URL(fileURLWithPath: path)
-
+        imageView.image = UIImage(named: trackName)
+            trackNameLabel.text = trackName
+            trackNameLabel.numberOfLines = 0
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: url)
             audioPlayer?.prepareToPlay()
